@@ -42,16 +42,12 @@ export default {
   },
   computed: {
     setShabonPos: function () {
-      // return {}
-      // let info = this.setShabonInfo()
       return {
         top: this.shabonInfo.y + 'px',
         left: this.shabonInfo.x + 'px'
       }
     },
     setShabonScale: function () {
-      // return {}
-      // let info = this.setShabonInfo()
       return {
         transform: 'scale(' + this.shabonInfo.scale + ',' + this.shabonInfo.scale + ')'
       }
