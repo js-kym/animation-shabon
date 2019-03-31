@@ -77,6 +77,7 @@ export default {
   position: absolute;
   width: 200px;
   height: 200px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .v-enter-active {
   transition: opacity .5s;
