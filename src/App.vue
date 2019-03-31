@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Shabon/>
-    <Shabon/>
-    <Shabon/>
-    <Shabon/>
+    <Shabon :color="'#ff0000'"/>
+    <Shabon :color="'#00ff00'"/>
+    <Shabon :color="'#0000ff'"/>
+    <Shabon :color="'#ff0000'"/>
   </div>
 </template>
 

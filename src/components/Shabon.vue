@@ -1,9 +1,13 @@
 <template>
   <div id="shabon" @click="animation">
     <transition>
-      <ShabonOrign  v-if="!isClick"/>
+      <ShabonOrign
+        v-if="!isClick"
+        :color="color"/>
     </transition>
-    <ShabonAnimation  v-if="isClick"/>
+    <ShabonAnimation
+      v-if="isClick"
+      :color="color"/>
   </div>
 </template>
 
@@ -16,6 +20,12 @@ export default {
   components: {
     ShabonOrign,
     ShabonAnimation
+  },
+  props: {
+    color: {
+      type: String,
+      default: '#9F9'
+    }
   },
   data () {
     return {
