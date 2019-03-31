@@ -1,13 +1,15 @@
 <template>
-  <div id="shabon" @click="animation">
-    <transition>
-      <ShabonOrign
-        v-if="!isClick"
+  <div class="shabon float" @click="animation" :style="setShabonPos">
+    <div :style="setShabonScale">
+      <transition>
+        <ShabonOrign
+          v-if="!isClick"
+          :color="color"/>
+      </transition>
+      <ShabonAnimation
+        v-if="isClick"
         :color="color"/>
-    </transition>
-    <ShabonAnimation
-      v-if="isClick"
-      :color="color"/>
+    </div>
   </div>
 </template>
 
@@ -25,11 +27,34 @@ export default {
     color: {
       type: String,
       default: '#9F9'
+    },
+    shabonInfo: {
+      type: Object,
+      default: function () {
+        return {}
+      }
     }
   },
   data () {
     return {
       isClick: false
+    }
+  },
+  computed: {
+    setShabonPos: function () {
+      // return {}
+      // let info = this.setShabonInfo()
+      return {
+        top: this.shabonInfo.y + 'px',
+        left: this.shabonInfo.x + 'px'
+      }
+    },
+    setShabonScale: function () {
+      // return {}
+      // let info = this.setShabonInfo()
+      return {
+        transform: 'scale(' + this.shabonInfo.scale + ',' + this.shabonInfo.scale + ')'
+      }
     }
   },
   methods: {
@@ -48,8 +73,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#shabon {
-  position: relative;
+.shabon {
+  position: absolute;
   width: 200px;
   height: 200px;
 }
