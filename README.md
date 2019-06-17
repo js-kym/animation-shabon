@@ -1,21 +1,12 @@
-# animation-shabon
+# animation-test
+ブログ用成果物
+[AnimateCCで書き出したSVGアニメーションの色をVue.jsで変更する](https://jskym.qrunch.io/entries/d25GvvSLDD9TYndK)
 
-> A Vue.js project
+## フレームワーク
+Vue.js (vue-cli2を使用)
 
-## Build Setup
+## ツール
+AnimateCC
 
-``` bash
-# install dependencies
-npm install
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## URL
+[成果物](https://adoring-lovelace-1a31c7.netlify.com/)
